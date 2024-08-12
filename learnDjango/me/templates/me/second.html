@@ -7,5 +7,13 @@
 </head>
 <body>
     <h1>This is my second file loaded from app folder</h1>
+    {% for car in cars %}
+
+<div>
+    <img src={{car.carImg}}></img>
+    <h3>{{car.name}}</h3>
+</div>
+
+{% endfor %} 
 </body>
 </html>

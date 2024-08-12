@@ -1,7 +1,20 @@
 {% extends "layout.html" %}
 
-{% block title %}me/firstpage{% endblock title %}
+{% block title %}first page{% endblock  %}
 
 {% block content %}
-<h1 class='bg-orange-600'>This is the first file loaded from app</h1>
-{% endblock %}
+<h1 class="bg-orange-600">This is the first page loaded from app</h1>
+
+{% for car in cars  %}
+<div class="grid grid-cols-3 gap-4 m-4">
+<img src={{car.carImg.url}} style=""></img>
+<h3>{{car.name}} {{car.description}}</h3>
+<a href="{% url 'cardetails' car.id %}">
+    <button>
+        {{car.carType}}
+    </button>
+</a>
+</div>
+{% endfor %}
+
+{% endblock  %}
