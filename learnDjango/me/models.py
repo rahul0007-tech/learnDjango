@@ -44,6 +44,15 @@ class Booking(models.Model):
      carBooking = models.ManyToManyField(Car, related_name='bookings')
      userBooking = models.ManyToManyField(User, related_name='bookings')
 
+# class Registraion(models.Model):
+#     username = models.CharField( max_length=30)
+#     firstName = models.CharField( max_length=30, blank=True)
+#     lastName = models.CharField( max_length=30, blank=True)
+#     email = models.EmailField(max_length=30, unique=True)
+#     password = models.CharField(max_length=20)
+
+
+
 
 
 
